@@ -40,6 +40,21 @@ Individual writeups:
 
 Carson-My first promt was giving the Vscode copilot AI the sprint intructions as an .md file and our openai.yaml file along with the prompt "Using the openapi.yaml do the work for Sprint 5 following the instructions". The agent produced a nice looking bug report submission front end. It had a simple white background, with the four fields(title, descirption, steps to reproduce, email) and a submit button. Each field had a description in it of an example input and it showed which fields were optional. There were a few issues, however. So for my second prompt I told it no reports could be submitted and an error kept getting displayed. The agent fixed the error(the port in the .env file was wrong). It did not change the appearance at all. I then prompted the AI to not put the optional tag next to title and description fields since those are required. It got rid of those and everything else stayed the same. I kept everything except a line of text that said you only needed a title or description since that wasnt true. Everything else looked nice. The last promt I did was to enforce proper formatting for the email address, but that did not chnage the appearance of the front end. Next time I would initially promt it to follow the instructions EXACTLY and not add any extra stuff to it, since then it would more likely follow instructions and I could prompt it to add extra features later.
 
+Geovnai
+### Initial Prompt
+
+Read the sprint-5 pdf and to make a bugtracker using the openapi file
+
+### First Output
+The agent read the spec, extracted the POST /v1/issues request shape, and scaffolded everything in one pass. It produced every file the project needed including page.tsx, BugReportForm.tsx, globals.css, next.config.ts, tsconfig.json, package.json, postcss.config.mjs, eslint.config.mjs, and a WORKFLOWS.md template. The form handles success, validation errors, and network failure
+
+### What I kept
+Everything the agent produced.
+
+### What I'd do next
+I would start with smaller things then work my way up
+
+
 Evin
 ### Initial Prompt
 
