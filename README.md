@@ -39,3 +39,54 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 Individual writeups:
 
 Carson-My first promt was giving the Vscode copilot AI the sprint intructions as an .md file and our openai.yaml file along with the prompt "Using the openapi.yaml do the work for Sprint 5 following the instructions". The agent produced a nice looking bug report submission front end. It had a simple white background, with the four fields(title, descirption, steps to reproduce, email) and a submit button. Each field had a description in it of an example input and it showed which fields were optional. There were a few issues, however. So for my second prompt I told it no reports could be submitted and an error kept getting displayed. The agent fixed the error(the port in the .env file was wrong). It did not change the appearance at all. I then prompted the AI to not put the optional tag next to title and description fields since those are required. It got rid of those and everything else stayed the same. I kept everything except a line of text that said you only needed a title or description since that wasnt true. Everything else looked nice. The last promt I did was to enforce proper formatting for the email address, but that did not chnage the appearance of the front end. Next time I would initially promt it to follow the instructions EXACTLY and not add any extra stuff to it, since then it would more likely follow instructions and I could prompt it to add extra features later.
+
+Evin
+### Initial Prompt
+
+Read the sprint-5 pdf and complete the bugtracker front end referencing the openapi.yaml file.
+
+### First Output
+
+The agent produced:
+🎯 Completed Deliverables
+✅ Core Application Files
+Next.js App Router structure with TypeScript support
+BugReportForm.tsx - Complete form component with:
+Full form validation matching OpenAPI spec
+Three-state error handling (validation, server, network errors)
+Success confirmation with issue ID
+Accessible design with proper labels, ARIA attributes, error associations
+Mobile-responsive styling
+
+✅ Configuration Files
+package.json - All dependencies configured
+next.config.js - Next.js configuration
+tsconfig.json - TypeScript setup
+.env.local - Development API URL (localhost:3000)
+.env.production - Production API URL template
+.eslintrc.json - Linting rules
+
+✅ Documentation
+README.md - Comprehensive guide covering features, setup, deployment, troubleshooting
+QUICKSTART.md - Fast-track guide for getting started
+DEPLOYMENT.md - Step-by-step deployment to Vercel or Render with CORS setup
+WORKFLOWS.md - Template for team members to document their individual AI scaffolding workflows
+API_EXAMPLES.md - Example requests/responses for testing the form
+
+📋 Form Features
+The form:
+
+✅ Posts to POST /v1/issues without authentication
+✅ Validates that at least title OR description is required (per OpenAPI spec)
+✅ Accepts optional fields: reproSteps, reporter
+✅ Shows success message with issue ID on submission
+✅ Displays validation errors from API inline with fields
+✅ Handles network failures gracefully
+✅ Fully accessible (WCAG compliant)
+✅ Works on desktop and mobile
+
+**What worked well:**
+- Everything just works, there was no need for iteration
+
+**What missed the mark:**
+- Nothing
