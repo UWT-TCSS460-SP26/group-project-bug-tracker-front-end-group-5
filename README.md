@@ -105,3 +105,38 @@ The form:
 
 **What missed the mark:**
 - Nothing
+
+---
+
+## Team Meeting Minutes — Scaffold Comparison & Final Build Decision
+
+### Members Present
+- Carson
+- Geovnai
+- Evin
+- Kylen
+
+### Each Member's Build Summary
+
+**Carson:** Produced a clean, minimal bug report form with a white background, four fields (title, description, steps to reproduce, email), and a submit button. Required multiple follow-up prompts to fix a misconfigured port in `.env`, remove incorrect "optional" labels from required fields, and add email format validation. Final result was functional after iteration.
+
+**Geovnai:** Agent scaffolded the full project in a single pass from the sprint PDF and OpenAPI spec, producing all necessary files including `page.tsx`, `BugReportForm.tsx`, `globals.css`, and config files. Form handled success, validation errors, and network failures. Everything produced was kept as-is.
+
+**Evin:** Agent produced a comprehensive deliverable including the form component, config files, environment files, and extensive documentation (README, QUICKSTART, DEPLOYMENT, WORKFLOWS, API_EXAMPLES). Form was fully accessible, mobile-responsive, and matched the OpenAPI spec. No iteration was needed.
+
+**Kylen:** Produced a polished, production-quality UI with strong visual design, intuitive layout, and clean user experience. Required no changes or follow-up prompts, and introduced no front-end bugs during testing.
+
+### Comparison
+
+| Member  | UI Quality | Bugs Found | Changes Required |
+|---------|-----------|------------|-----------------|
+| Carson  | Good      | Yes (port config, label issues) | Yes |
+| Geovnai | Good      | None       | None            |
+| Evin    | Good      | None       | None            |
+| Kylen   | Best      | None       | None            |
+
+### Decision
+
+All four front-end UIs functioned correctly. After review, the team selected **Kylen's build** as the final submission.
+
+All test front-end UIs worked, but we selected Kylen's because it had the best UI design and ease of use. Additionally, Kylen's was the only one we didn't need to change anything about or that produced any front-end bugs. Hence, for those reasons we picked Kylen's bug tracker front-end.
